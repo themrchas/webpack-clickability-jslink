@@ -1,0 +1,477 @@
+/* CSS used to render the tabs */
+
+
+:root {
+    --low: 255, 255, 255;
+    --low-selected: 25, 180, 25;
+    --normal: 225, 225, 0;
+    --normal-selected: 175, 145, 0;
+    --high: 250, 175, 0;
+    --high-selected: 225, 150, 0;
+    --table-color: #336699;
+    --blue-1-light: #CCD9E633;
+    --orange-1-light: #FFB39933;
+
+    --clear: transparent;
+    /* --white: #FFFFFF;
+    --black: #000000;
+    --grey-1: #E6E6E6;
+    --grey-2: #CCCCCC;
+    --grey-3: #B3B3B3;
+    --grey-4: #999999;
+    --grey-5: #808080;
+    --grey-6: #666666;
+    --grey-7: #4D4D4D;
+    --grey-8: #333333;
+    --blue-1: #CCD9E6;
+    --blue-2: #99B3CC;
+    --blue-3: #668DB3;
+    --blue-4: #336699;
+    --blue-5: #1A4D80;
+    --blue-6: #003366;
+    --blue-7: #00274D;
+    --blue-8: #001A33;
+    --orange-1: #FFB399;
+    --orange-2: #FF8D66;
+    --orange-3: #FF7A4D;
+    --orange-4: #FF6633;
+    --orange-5: #E66633;
+    --orange-6: #CC6633;
+    --orange-7: #994D27;
+    --orange-8: #66331A; */
+}
+
+.ms-fullscreenmode #contentRow {padding: 0;}
+.ms-fullscreenmode #contentBox {margin: 0;}
+.ms-fullscreenmode .ms-webpartzone-cell {padding: 0;}
+[id^="Hero-"] {
+    width: 100%;
+}
+
+/* Control Styles */
+.ms-csrlistview-controldiv {
+    align-items: center;
+    background: var(--grey-4);
+    border: 1px solid var(--grey-6);
+    border-bottom-color: var(--blue-6);
+    display: flex;
+    padding: .2em .2em 0;
+    position: relative;
+}
+:root .ms-csrlistview-controldiv,
+:root .ms-csrlistview-controldiv .ms-pivotControl-container {
+    padding-bottom: 0;
+}
+/* .ms-csrlistview-controldiv .ms-pivotControl-container {
+    flex: auto;
+} */
+.ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline[id*="inplace"] {
+    justify-content: right;
+    flex: auto;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+/* .ms-InlineSearch-DivBaseline-NoView {
+    margin-top: 3px;
+    margin-bottom: 3px;
+} */
+.ms-InlineSearch-Outline-Baseline {
+    background: var(--white);
+    border: 1px solid var(--grey-6);
+    float: none;
+    display: inline-block;
+}
+.ms-pivotControl-overflowSpan {
+    margin-left: 15px;
+}
+.ms-csrlistview-controldiv .ms-pivotControl-container > a {
+    background: var(--grey-2);
+    color: var(--grey-7);
+    padding: .5em 1em;
+    border: 1px solid var(--grey-6);
+    border-bottom: 0;
+    margin: 1px .2em 0 0;
+}
+.ms-csrlistview-controldiv .ms-pivotControl-container > a:not(.ms-pivotControl-surfacedOpt-selected):hover {
+    background: var(--grey-1);
+    border-color: var(--orange-4);
+}
+.ms-csrlistview-controldiv .ms-pivotControl-container > a.ms-pivotControl-surfacedOpt-selected {
+    background: var(--blue-4);
+    color: var(--white);
+    border-color: var(--blue-6);
+    border-bottom: 1px solid var(--blue-4);
+    margin-bottom: -1px;
+}
+[id^="scriptPaging"] {
+    background: var(--blue-4);
+}
+
+/*Admin tabs*/
+.ms-csrlistview-controldiv .ms-pivotControl-container > a.ms-pivotControl-surfacedOpt.nshq-admin {
+    background: var(--orange-2);
+}
+.ms-csrlistview-controldiv .ms-pivotControl-container > a.ms-pivotControl-surfacedOpt-selected.nshq-admin {
+    background: var(--orange-4);
+    border-color: var(--orange-6);
+    border-bottom-color: var(--orange-4);
+}
+.nshq-admin .ms-listviewtable:not(.ms-listviewgrid) > thead {
+    background: var(--orange-4);
+}
+.nshq-admin .ms-csrlistview-controldiv,
+.nshq-admin .ms-listviewtable:not(.ms-listviewgrid),
+.nshq-admin .ms-listviewtable:not(.ms-listviewgrid) > thead th {
+    border-color: var(--orange-6);
+}
+
+.ms-list-addnew {
+    background-color: var(--clear);
+    border: 1px solid var(--clear);
+    border-bottom: 0;
+    padding: 5px;
+}
+.ms-list-addnew .ms-core-form-heading:not(.ms-disabled) {
+    color: var(--orange-6);
+}
+.nshq-admin [id^="scriptPaging"] {
+    background: var(--orange-4);
+}
+
+/* Table Styles*/
+.ms-listviewtable:not(.ms-listviewgrid) {
+    border: 1px solid var(--blue-6);
+    min-width: 100%;
+}
+.ms-csrlistview-controldiv ~ .ms-listviewtable:not(.ms-listviewgrid) {
+    border-top: 0;
+}
+.ms-listviewtable:not(.ms-listviewgrid) > thead th.ms-vh-icon:last-child {
+    display: none;
+}
+.ms-listviewtable:not(.ms-listviewgrid) > thead {
+    background: var(--blue-4);
+}
+.ms-listviewtable:not(.ms-listviewgrid) > thead th {
+    border-bottom: 1px solid var(--blue-6);
+}
+.ms-listviewtable:not(.ms-listviewgrid) > thead th .ms-cui-img-16by16 {
+    filter: contrast(400%) invert(100%);
+}
+.ms-listviewtable:not(.ms-listviewgrid) .ms-dragDropAttract {
+    border: 1px solid var(--blue-6);
+    border-top: 0;
+    background: var(--grey-4);
+}
+.ms-listviewtable .ms-dragDropAttract .ms-dragDropAttract-subtle {
+    color: var(--black);
+}
+.ms-listviewtable tr {
+    line-height: 1.4em;
+}
+.ms-listviewtable a.ms-headerSortTitleLink,
+.ms-listviewtable .ms-vh-div,
+.ms-InlineSearch-SearchStatus,
+.ms-listviewgrid th > *:not([role="menu"]) * {
+    color: var(--white) !important;
+}
+.ms-InlineSearch-SearchStatus a {
+    color: var(--grey-4);
+}
+.ms-listviewtable :where(.ms-selectall-icon, .ms-headerSortArrowLink, .ms-sortarrowup-icon, .ms-sortarrowdown-icon, img[alt="Attachments"]),
+.ms-listviewgrid :where(.ms-chkmark-marktaskcomplete, .ms-addcolumn-icon) {
+    filter: brightness(3);
+}
+td.ms-vb-imgFirstCell.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    border-width: 1px 10px 1px 1px;
+}
+.ms-listviewtable > tbody > tr > td:not(:first-child) {
+    border-left: 0;
+}
+.ms-listviewtable > tbody > tr > td:not(:last-child) {
+    border-right: 0;
+}
+.ms-bottompaging {
+    width: 100%;
+}
+.ms-bottompaging .ms-vb.ms-bottompagingline {
+    color: var(--white);
+    border: 1px solid var(--blue-6);
+    border-top: 0;
+    padding: 5px;
+}
+.ms-list-emptyText-compact {
+    color: var(--white);
+}
+.ms-gb {
+    border-color: var(--grey-4);
+}
+.ms-gb2 {
+    border-top: 1px solid var(--grey-2);
+    border-bottom: 1px solid var(--grey-2);
+    background: var(--grey-1);
+    color: var(--grey-6)
+}
+tbody[groupstring] ~ tbody[groupstring] .ms-gb {
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+[id^="tbod"][style^="display"] + tbody[groupstring] .ms-gb,
+[id^="tbod"][style^="display"] + tbody[groupstring] .ms-gb2,
+tbody[groupstring] + tbody[groupstring] .ms-gb2 {
+    border-top-width: 0
+}
+[id^="titl"]:not([style^="display"]) + [id^="tbod"][style^="display"] + tbody[groupstring] .ms-gb {
+    border-top-width: 1px;
+}
+.ms-listviewtable > tbody[id^="aggr"] > tr {
+    background-color: var(--grey-3);
+}
+.ms-listviewtable > tbody[id^="aggr"] td {
+    color: white;
+    text-align: right;
+    border-bottom: 1px solid var(--grey-4);
+}
+
+/* alternate row color */
+.ms-listviewtable > tbody:not([id]) > tr:nth-child(odd),
+.ms-listviewtable > tbody[id^="tbod"] > tr:nth-child(odd) {
+    background-color: var(--blue-1-light);
+}
+.ms-listviewtable > tbody[groupstring] > tr {
+    background-color: var(--grey-2);
+}
+.ms-listviewtable > tbody[id^="titl"][style] > tr {
+    background-color: var(--grey-1);
+}
+
+.ms-listviewtable > tbody:not([groupstring])[id$="_page"] > tr {
+    background-color: var(--grey-1);
+}
+.ms-listviewtable > tbody:not([groupstring])[id$="_page"] > tr > td {
+    border-top: 1px solid var(--grey-3);
+}
+
+/* unselected row color */
+.ms-listviewtable > tbody > tr[data-priority="Low"] > td {
+    background-color: rgba(var(--low), 0.4);
+}
+.ms-listviewtable > tbody > tr[data-priority="Medium"] > td {
+    background-color: rgba(var(--normal), 0.4);
+}
+.ms-listviewtable > tbody > tr[data-priority="High"] > td {
+    background-color: rgba(var(--high), 0.4);
+}
+
+/* unselected row hover color */
+.ms-listviewtable > tbody > tr[data-priority="Low"]:hover > td {
+    background-color: rgba(var(--low), .6);
+    border-color: rgba(var(--low), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="Medium"]:hover > td {
+    background-color: rgba(var(--normal), .6);
+    border-color: rgba(var(--normal), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="High"]:hover > td {
+    background-color: rgba(var(--high), .6);
+    border-color: rgba(var(--high), .8);
+}
+
+/* selected row color */
+.ms-listviewtable > tbody > tr[data-priority="Low"].s4-itm-selected > td {
+    background-color: rgba(var(--low), .8);
+    border-color: rgba(var(--low-selected), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="Low"].s4-itm-selected > td.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    background-color: rgba(var(--low-selected), .8);
+    border-color: rgba(var(--low-selected), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="Medium"].s4-itm-selected > td {
+    background-color: rgba(var(--normal), .8);
+    border-color: rgba(var(--normal-selected), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="Medium"].s4-itm-selected > td.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    background-color: rgba(var(--normal-selected), .8);
+    border-color: rgba(var(--normal-selected), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="High"].s4-itm-selected > td {
+    background-color: rgba(var(--high), .8);
+    border-color: rgba(var(--high-selected), .8);
+}
+.ms-listviewtable > tbody > tr[data-priority="High"].s4-itm-selected > td.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    background-color: rgba(var(--high-selected), .8);
+    border-color: rgba(var(--high-selected), .8);
+}
+
+/* selected row hover color */
+.ms-listviewtable > tbody > tr[data-priority="Low"].s4-itm-selected:hover > td {
+    background-color: rgba(var(--low), 1);
+    border-color: rgba(var(--low-selected), 1);
+}
+.ms-listviewtable > tbody > tr[data-priority="Low"].s4-itm-selected:hover > td.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    background-color: rgba(var(--low-selected), 1);
+    border-color: rgba(var(--low-selected), 1);
+}
+.ms-listviewtable > tbody > tr[data-priority="Medium"].s4-itm-selected:hover > td {
+    background-color: rgba(var(--normal), 1);
+    border-color: rgba(var(--normal-selected), 1);
+}
+.ms-listviewtable:not(.ms-listviewgrid) > tbody > tr[data-priority="Medium"].s4-itm-selected:hover > td.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    background-color: rgba(var(--normal-selected), 1);
+    border-color: rgba(var(--normal-selected), 1);
+}
+.ms-listviewtable > tbody > tr[data-priority="High"].s4-itm-selected:hover > td {
+    background-color: rgba(var(--high), 1);
+    border-color: rgba(var(--high-selected), 1);
+}
+.ms-listviewtable > tbody > tr[data-priority="High"].s4-itm-selected:hover > td.ms-vb-imgFirstCell.ms-vb-imgFirstCell {
+    background-color: rgba(var(--high-selected), 1);
+    border-color: rgba(var(--high-selected), 1);
+}
+
+.ms-listviewtable.ms-listviewgrid > tbody:not([id]) > tr.ms-viewheadertr {
+    background: var(--orange-4);
+}
+.ms-listviewtable.ms-listviewgrid > tbody:not([id]) > tr:not(.ms-viewheadertr):nth-child(odd) {
+    background-color: var(--orange-1-light);
+}
+.ms-listviewtable .ms-lstItmLinkAnchor {
+    margin: 0;
+}
+.ms-listviewtable .ms-newdocument-iconouter {
+    top: 0;
+    height: 14px;
+    width: 14px;
+}
+
+
+.ms-listviewtable:not(.ms-listviewgrid) > tbody:not([id]) > tr:not([id]) > td {padding: 0;}
+
+/* Spinners in List */
+.ms-listviewtable .lds-spinner {
+    scale: .25;
+    width: 20px;
+    height: 20px;
+    transform-origin: top;
+}
+
+/* Gantt Chart/timeline */
+[istimelineparent="1"] {
+    display: block;
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+}
+.tabsContainer [istimelineparent="1"] {
+    background-color: var(--blue-4);
+    border: 1px solid var(--blue-6);
+    border-top: 0px;
+    margin-bottom: 0 !important;
+}
+[istimelineparent="1"] > div {
+    width: unset !important;
+}
+[istimelineparent="1"] .ms-tl-mainArea {
+    left: 5px !important;
+    right: 5px;
+    width: unset !important;
+}
+/* [istimelineparent="1"] .ms-tl-mainArea .ms-tl-today {
+    border-color: var(--orange-6) !important
+} */
+.tabsContainer [istimelineparent="1"] .ms-tl-timescale * {
+    color: var(--white) !important;
+}
+/* [istimelineparent="1"] .ms-tl-todayLabel, */
+[istimelineparent="1"] .ms-tl-milestoneLabel,
+[istimelineparent="1"] .ms-tl-calloutLabel {
+    background-color: var(--orange-4) !important;
+    border: 1px solid var(--orange-6) !important;
+}
+/* [istimelineparent="1"] .ms-tl-todayLabel, */
+[istimelineparent="1"] .ms-tl-milestoneLabel,
+[istimelineparent="1"] .ms-tl-milestoneLabel *,
+[istimelineparent="1"] .ms-tl-calloutLabel * {
+    color: var(--white) !important;
+}
+[istimelineparent="1"] .ms-tl-bar[style*="rgb(100, 131, 205)"] {
+    background-color: var(--blue-6) !important;
+}
+[istimelineparent="1"] .ms-tl-bar[style*="rgb(100, 131, 205)"] * {
+    color: var(--white) !important;
+}
+
+[id$="_ListViewWebPartJSGrid"] > label + div {
+    border-top: 0 !important;
+    border-color: var(--blue-6) !important;
+}
+
+#AsynchronousViewDefault_CalendarView {
+    border: 1px solid var(--blue-6);
+    border-top: 0;
+}
+table.ms-acal-month {
+    border-top: 0;
+}
+.ms-acal-header {
+    background-color: var(--blue-4);
+    border-bottom: 1px solid var(--blue-6);
+    margin: 0;
+    padding: 10px;
+}
+.ms-acal-display {
+    color: var(--white);
+}
+.ms-acal-rootdiv {
+    margin: 0;
+}
+/* Checkbox control styles*/
+.fa.checkbox {
+    border: 1px solid var(--grey-4);
+    border-radius: 3px;
+    padding: 3px;
+    width: 13px;
+    cursor: pointer;
+}
+.fa.checkbox:hover {
+    border-color: var(--orange-6);
+    background: var(--grey-1);
+}
+.fa.fa-check {
+    color: #07ac07;
+}
+.fa.fa-times {
+    color: rgb(182, 15, 15);
+    /* width: 1em; */ /* removed for PRF */
+    text-align: center;
+}
+.fa.checkbox.fa-check::before {
+    visibility: hidden;
+}
+.fa.checkbox.fa-check[data-value="1"]::before,
+.fa.checkbox.fa-check[data-value="Yes"]::before {
+    visibility: visible;
+}
+
+
+[id^="spgridcontainer_"][id$="_leftpane"] > div {
+    margin: 0px !important;
+}
+
+[id$="ListViewWebPartJSGrid"] rect[fill="#42AEB3"] {
+    fill: var(--blue-4) !important;
+    stroke: var(--blue-6) !important;
+}
+[id$="ListViewWebPartJSGrid_leftpane"] th,
+[id$="ListViewWebPartJSGrid_rightpane"] > div:first-child {
+    background-color: var(--blue-4) !important;
+}
+[id$="ListViewWebPartJSGrid_leftpane"] th *,
+[id$="ListViewWebPartJSGrid_rightpane"] > div:first-child * {
+    color: var(--white) !important;
+}
+
+.jsgrid-control-editbox {
+    background-color: white !important;
+}
